@@ -1,0 +1,76 @@
+body {
+    font-family: Barriecito;
+    margin: 0;
+    padding: 0;
+    background-image: url(/img/birthday.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+h1 {
+    font-family: 'Barriecito';
+    font-size: 3em;
+    color: #008CBA;
+}
+label, .result, p {
+    font-family: "Funnel Display", sans-serif;
+    font-size: 1.2em;
+    color: #333;
+}
+.container {
+    width: 30%;
+    margin: auto;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.4);
+    position: relative;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+.button {
+    font-family: "Funnel Display", sans-serif;
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+}
+.feld {
+    font-family: "Funnel Display", sans-serif;
+    background-color: white;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+.inhalte {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+
+
+.funnel-display {
+  font-family: "Funnel Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.barriecito-regular {
+  font-family: "Barriecito", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
