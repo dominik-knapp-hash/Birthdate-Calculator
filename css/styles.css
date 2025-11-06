@@ -2,7 +2,7 @@ body {
     font-family: Barriecito;
     margin: 0;
     padding: 0;
-    background-image: url(/img/birthday.jpg);
+    background-image: url(img/birthday.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
