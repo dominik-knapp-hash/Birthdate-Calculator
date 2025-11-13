@@ -24,6 +24,9 @@ const addTask = (taskText) => {
     const textSpan = document.createElement("span");
 
     textSpan.textContent = taskText;
+    if (textSpan.textContent === "") {
+        textSpan.textContent = task;
+    }
 
     liElement.appendChild(liButton);
     liElement.appendChild(textSpan);
