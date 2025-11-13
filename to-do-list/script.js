@@ -25,9 +25,9 @@ const addTask = (taskText) => {
     task.push(newTask);
     
     (saveTask) => {
-    const JSONstring = JSON.stringify(task);
+    const taskJSON = JSON.stringify(task);
 
-    localStorage.setItem("TODO", JSONstring);
+    localStorage.setItem("TODO", taskJSON);
 }
 
     liButton.addEventListener("mouseover", (event) => {
