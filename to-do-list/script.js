@@ -21,7 +21,7 @@ function loadTasks() {
     addTask(task[2]);
     addTask(task[3]);
 }
-
+loadTasks();
 const addTask = (taskText) => {
     const liElement = document.createElement("li");
     const liButton = document.createElement("button");
@@ -69,5 +69,3 @@ submit.addEventListener("submit", (event) => {
 
     taskInput.value = "";
 });
-
-loadTasks();
