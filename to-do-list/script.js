@@ -5,12 +5,6 @@ const taskList = document.getElementById("taskList");
 const taskInput = document.getElementById('taskInput');
 const submit = document.getElementById("submit");
 
-(saveTask) => {
-    const taskJSON = JSON.stringify(task);
-
-    localStorage.setItem("TODO", taskJSON);
-}
-
 const addTask = (taskText) => {
     const liElement = document.createElement("li");
     const liButton = document.createElement("button");
