@@ -7,10 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barriecito&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
     <div class="container">
@@ -19,7 +16,7 @@
         <div class="inhalte">
         <label for="datum"><b>Wähle dein Geburtsdatum:</b></label>
         <br></br>
-        <input class="feld" type="date" id="datum" name="gewaehltes_datum">
+        <input class="feld" type="date" id="datum" name="gewaehltes_datum" placeholder="Datum wählen">
         <br><br>
         </form>
         <button class="button" type="submit" id="berechnen">Berechnen</button>
@@ -28,5 +25,7 @@
     <p id="ergebnis-anzeige">Dein Alter wird hier angezeigt.</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
-    <script src="/js/script.js"></script>
+    <script src="js/script.js"></script>
+    <button class="nextPage"><a href="/to-do-list.html">To-Do-Liste</a></button>
+</body>
 </html>

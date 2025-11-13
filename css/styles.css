@@ -1,8 +1,8 @@
 body {
-    font-family: Barriecito;
+    font-family: "Barriecito";
     margin: 0;
     padding: 0;
-    background-image: url(/img/birthday.jpg);
+    background-image: url(../img/birthday.webp);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -16,23 +16,22 @@ h1 {
     color: #008CBA;
 }
 label, .result, p {
-    font-family: "Funnel Display", sans-serif;
+    font-family: "Funnel Display";
     font-size: 1.2em;
     color: #333;
 }
 .container {
-    width: 30%;
     margin: auto;
     overflow: hidden;
     background-color: rgba(255, 255, 255, 0.4);
     position: relative;
-    padding: 40px;
+    padding: 4vw;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
 }
 .button {
-    font-family: "Funnel Display", sans-serif;
+    font-family: "Funnel Display";
     background-color: #008CBA;
     color: white;
     padding: 10px 20px;
@@ -43,7 +42,7 @@ label, .result, p {
     width: 100%;
 }
 .feld {
-    font-family: "Funnel Display", sans-serif;
+    font-family: "Funnel Display";
     background-color: white;
     color: #333;
     padding: 10px 20px;
@@ -59,18 +58,75 @@ label, .result, p {
     margin: auto;
     text-align: center;
 }
+* {
+    box-sizing: border-box;
+}
 
-
-
-.funnel-display {
-  font-family: "Funnel Display", sans-serif;
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    .container {
+        width: 90%;
+        padding: 2vw;
+    }
+    .inhalte {
+        width: 80%;
+    }
+    p, label {
+        font-size: 1.3em;
+    }
+    b {
+        font-size: 1.5em;
+    }
+    .feld, .button {
+        font-size: 1.2em;
+        height: 100%;
+    }
+    input[type="date"] {
+    width: 100%; 
+    box-sizing: border-box;   
+    -webkit-appearance: none; 
+    appearance: none;  
+    border: 1px solid #ccc; 
+    padding: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+}
+.nextPage {
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 20px 20px 20px 90%;
+    background-color: rgba(0, 0, 0, 0.153);
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    display: flex;
+    flex-grow: 1;
+}
+.nextPage:hover {
+    background-color: rgba(0, 0, 0, 0.213);
+    cursor: pointer;
+}
+@font-face {
+  font-family: "Funnel Display";
+  src: url("fonts/B50WF7FGv37QNVWgE0ga--4Pbb6dDYs0gnHA.woff2") format("woff2");
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
-.barriecito-regular {
-  font-family: "Barriecito", system-ui;
+@font-face {
+  font-family: "Barriecito";
+  src: url("fonts/WWXXlj-CbBOSLY2QTuY_GdIoYibNwMQ.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
+}
+a {
+    font-style: normal;
+    color: white;
 }
