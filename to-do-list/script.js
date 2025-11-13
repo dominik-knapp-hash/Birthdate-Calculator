@@ -16,17 +16,13 @@ function loadTasks() {
     JSON.parse(loadedTask);
     task.push(loadedTask);
     console.log(task);
+    addTask();
 }
 
 const addTask = (taskText) => {
     const liElement = document.createElement("li");
     const liButton = document.createElement("button");
     const textSpan = document.createElement("span");
-
-    textSpan.textContent = taskText;
-    if (textSpan.textContent === "") {
-        textSpan.textContent = task;
-    }
 
     liElement.appendChild(liButton);
     liElement.appendChild(textSpan);
