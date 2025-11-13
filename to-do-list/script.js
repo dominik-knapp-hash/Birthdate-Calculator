@@ -16,7 +16,10 @@ function loadTasks() {
     JSON.parse(loadedTask);
     task.push(loadedTask);
     console.log(task);
-    addTask();
+    addTask(task[0]);
+    addTask(task[1]);
+    addTask(task[2]);
+    addTask(task[3]);
 }
 
 const addTask = (taskText) => {
