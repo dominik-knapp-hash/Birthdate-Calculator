@@ -5,6 +5,12 @@ const taskList = document.getElementById("taskList");
 const taskInput = document.getElementById('taskInput');
 const submit = document.getElementById("submit");
 
+(saveTask) => {
+    const JSONstring = JSON.stringify(task);
+
+    localStorage.setItem(TODO, JSONstring);
+}
+
 const addTask = (taskText) => {
     const liElement = document.createElement("li");
     const liButton = document.createElement("button");
@@ -16,12 +22,17 @@ const addTask = (taskText) => {
     liElement.appendChild(textSpan);
     taskList.appendChild(liElement);
 
-    task.push({
+    const newTask = {
         text: taskText,
-        id: Date.now(),
         completed: false,
-    })
-    console.log(task)
+        id: Date.now() 
+    };
+
+    tasks.push(newTask);
+    
+    saveTask();
+
+    console.log(JSONstring);
 
     liButton.addEventListener("mouseover", (event) => {
         liButton.classList.add("hover");
