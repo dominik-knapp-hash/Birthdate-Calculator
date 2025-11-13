@@ -11,6 +11,13 @@ function saveTask() {
     localStorage.setItem("TODO", taskJSON);
     }
 
+function loadTasks() {
+    const loadedTask = localStorage.getItem("TODO")
+    JSON.parse(loadedTask);
+    task.push(loadedTask);
+    console.log(task);
+}
+
 const addTask = (taskText) => {
     const liElement = document.createElement("li");
     const liButton = document.createElement("button");
@@ -42,6 +49,8 @@ const addTask = (taskText) => {
 
     liButton.addEventListener("click", (event) => {
     liButton.parentElement.remove();
+
+
     });
 }
 
@@ -57,6 +66,6 @@ submit.addEventListener("submit", (event) => {
     }
 
     taskInput.value = "";
-
-
 });
+
+loadTasks();
