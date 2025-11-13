@@ -5,6 +5,12 @@ const taskList = document.getElementById("taskList");
 const taskInput = document.getElementById('taskInput');
 const submit = document.getElementById("submit");
 
+(saveTask) => {
+    const taskJSON = JSON.stringify(task);
+
+    localStorage.setItem("TODO", taskJSON);
+}
+
 const addTask = (taskText) => {
     const liElement = document.createElement("li");
     const liButton = document.createElement("button");
@@ -27,10 +33,8 @@ const addTask = (taskText) => {
     (saveTask) => {
     const JSONstring = JSON.stringify(task);
 
-    localStorage.setItem(TODO, JSONstring);
+    localStorage.setItem("TODO", JSONstring);
 }
-
-    console.log(JSONstring);
 
     liButton.addEventListener("mouseover", (event) => {
         liButton.classList.add("hover");
