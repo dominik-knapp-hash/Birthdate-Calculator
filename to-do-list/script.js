@@ -5,12 +5,6 @@ const taskList = document.getElementById("taskList");
 const taskInput = document.getElementById('taskInput');
 const submit = document.getElementById("submit");
 
-(saveTask) => {
-    const JSONstring = JSON.stringify(task);
-
-    localStorage.setItem(TODO, JSONstring);
-}
-
 const addTask = (taskText) => {
     const liElement = document.createElement("li");
     const liButton = document.createElement("button");
@@ -28,9 +22,13 @@ const addTask = (taskText) => {
         id: Date.now() 
     };
 
-    tasks.push(newTask);
+    task.push(newTask);
     
-    saveTask();
+    (saveTask) => {
+    const JSONstring = JSON.stringify(task);
+
+    localStorage.setItem(TODO, JSONstring);
+}
 
     console.log(JSONstring);
 
