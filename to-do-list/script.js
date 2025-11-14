@@ -29,6 +29,16 @@ function addTask(taskText) {
     liElement.appendChild(liButton);
     liElement.appendChild(textSpan);
     taskList.appendChild(liElement);
+
+    const newTask = {
+        text: taskText,
+        completed: false,
+        id: Date.now() 
+    };
+
+    task.push(newTask);
+
+
     
     liButton.addEventListener("mouseover", (event) => {
         liButton.classList.add("hover");
@@ -53,14 +63,6 @@ submit.addEventListener("submit", (event) => {
     if (taskText !== '') {
         addTask(taskText); 
     }
-    
-    const newTask = {
-        text: taskText,
-        completed: false,
-        id: Date.now() 
-    };
-
-    task.push(newTask);
 
     task.push(taskText);
 
