@@ -13,13 +13,13 @@ function saveTask() {
 
 function loadTasks() {
     const loadedTask = localStorage.getItem("TODO")
-    let = JSON.parse(loadedTask);
-    console.log(task);
-    task.forEach(oldTasks => {
-        addTask(oldTasks.text);
-    });
+    task = JSON.parse(loadedTask);
+    task.forEach(aufgabe => {
+        addTask(aufgabe.text);
+    })
 }
-const addTask = (taskText) => {
+
+function addTask() {
     const liElement = document.createElement("li");
     const liButton = document.createElement("button");
     const textSpan = document.createElement("span");
@@ -37,7 +37,7 @@ const addTask = (taskText) => {
     };
 
     task.push(newTask);
-}
+
 
     
     liButton.addEventListener("mouseover", (event) => {
@@ -53,7 +53,7 @@ const addTask = (taskText) => {
     liButton.addEventListener("click", (event) => {
     liButton.parentElement.remove();
     });
-
+}
 
 submit.addEventListener("submit", (event) => {
     event.preventDefault();
