@@ -37,7 +37,9 @@ const addTask = (taskText) => {
     };
 
     task.push(newTask);
+}
 
+    
     liButton.addEventListener("mouseover", (event) => {
         liButton.classList.add("hover");
         liButton.textContent = "✓";
@@ -50,10 +52,8 @@ const addTask = (taskText) => {
 
     liButton.addEventListener("click", (event) => {
     liButton.parentElement.remove();
-
-
     });
-}
+
 
 submit.addEventListener("submit", (event) => {
     event.preventDefault();
