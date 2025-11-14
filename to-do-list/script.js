@@ -1,4 +1,4 @@
-const task = [];
+let task = [];
 
 const addTaskButton = document.getElementById("addTaskButton");
 const taskList = document.getElementById("taskList");
@@ -13,15 +13,13 @@ function saveTask() {
 
 function loadTasks() {
     const loadedTask = localStorage.getItem("TODO")
-    JSON.parse(loadedTask);
-    task.push(loadedTask);
+    let = JSON.parse(loadedTask);
     console.log(task);
-    addTask(task[0]);
-    addTask(task[1]);
-    addTask(task[2]);
-    addTask(task[3]);
+    task.forEach(oldTasks => {
+        addTask(oldTasks.text);
+    });
 }
-loadTasks();
+console.log(task[0, 1, 2, 3])
 const addTask = (taskText) => {
     const liElement = document.createElement("li");
     const liButton = document.createElement("button");
@@ -58,8 +56,6 @@ const addTask = (taskText) => {
 
 submit.addEventListener("submit", (event) => {
     event.preventDefault();
-    
-    saveTask();
 
     const taskText = taskInput.value.trim();
 
@@ -68,4 +64,8 @@ submit.addEventListener("submit", (event) => {
     }
 
     taskInput.value = "";
+
+    saveTask();
 });
+
+loadTasks();
