@@ -14,9 +14,11 @@ function saveTask() {
 function loadTasks() {
     const loadedTask = localStorage.getItem("TODO")
     task = JSON.parse(loadedTask);
-    task.forEach(aufgabe => {
+    if (task !== ""){
+            task.forEach(aufgabe => {
         addTask(aufgabe.text);
     })
+    }
 }
 
 function addTask(taskText) {
@@ -37,8 +39,6 @@ function addTask(taskText) {
     };
 
     task.push(newTask);
-
-
     
     liButton.addEventListener("mouseover", (event) => {
         liButton.classList.add("hover");
@@ -61,8 +61,15 @@ submit.addEventListener("submit", (event) => {
     const taskText = taskInput.value.trim();
 
     if (taskText !== '') {
-        addTask(taskText); 
+        addTask(taskText);
+        const newTask = {
+            text: taskText,
+            completed: false,
+            id: Date.now() 
+        };
     }
+
+    task.push(newTask);
 
     task.push(taskText);
 
