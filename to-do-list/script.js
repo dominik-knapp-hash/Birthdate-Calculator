@@ -19,7 +19,7 @@ function loadTasks() {
     })
 }
 
-function addTask() {
+function addTask(taskText) {
     const liElement = document.createElement("li");
     const liButton = document.createElement("button");
     const textSpan = document.createElement("span");
