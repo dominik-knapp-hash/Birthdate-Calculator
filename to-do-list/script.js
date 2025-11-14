@@ -19,11 +19,12 @@ function loadTasks() {
         addTask(oldTasks.text);
     });
 }
-console.log(task[0, 1, 2, 3])
 const addTask = (taskText) => {
     const liElement = document.createElement("li");
     const liButton = document.createElement("button");
     const textSpan = document.createElement("span");
+
+    textSpan.textContent = taskText;
 
     liElement.appendChild(liButton);
     liElement.appendChild(textSpan);
@@ -63,9 +64,11 @@ submit.addEventListener("submit", (event) => {
         addTask(taskText); 
     }
 
-    taskInput.value = "";
+    task.push(taskText);
 
     saveTask();
+
+    taskInput.value = "";
 });
 
 loadTasks();
